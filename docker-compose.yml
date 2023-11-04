@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+  app:
+    container_name: mj-hack-stack-2.0-frontend
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    volumes:
+      - ./frontend/app:/app/app
+      - ./frontend/public:/app/public
+    # volumes:
+    #     - .:/app
+    #     - /app/node_modules
+    #     - /app/.next
+    ports:
+      - "3000:3000"
