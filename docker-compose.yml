@@ -1,6 +1,15 @@
 version: '3.8'
 services:
-  app:
+  nginx:
+    image: nginx:1.25
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf
+    ports:
+      - 8000:80
+    depends_on:
+      - backend
+      - frontend
+  frontend:
     container_name: mj-hack-stack-2.0-frontend
     build:
       context: ./frontend
