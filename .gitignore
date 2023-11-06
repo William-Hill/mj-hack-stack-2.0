@@ -1,5 +1,10 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
+fastapi-nextjs
+node_modules/
+package-lock.json
+.next/
+
 # dependencies
 frontend/node_modules
 /.pnp
