@@ -1,6 +1,7 @@
 FROM node:18
 
 ADD package.json /package.json
+ADD package-lock.json /package-lock.json
 
 RUN npm install
 
