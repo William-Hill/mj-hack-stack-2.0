@@ -2,7 +2,6 @@
 
 fastapi-nextjs
 node_modules/
-package-lock.json
 .next/
 
 # dependencies
