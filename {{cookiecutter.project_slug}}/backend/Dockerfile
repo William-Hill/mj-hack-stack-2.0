@@ -5,7 +5,7 @@ RUN mkdir /app
 WORKDIR /app
 
 RUN apt update && \
-    apt install -y postgresql-client
+    apt install -y gcc postgresql-client graphviz graphviz-dev
 
 COPY requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
