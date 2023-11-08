@@ -11,7 +11,7 @@ import MediaCard from "@/components/MediaCard";
 
 export default function HomePage() {
   return (
-    <Box sx={{ display: "flex" }}>
+    <Box>
       <div>
         <Alert severity="info">
           <AlertTitle>Hello 👋</AlertTitle>

@@ -49,25 +49,14 @@ export default function RootLayout({
       <body>
         <ThemeRegistry>
           <AppBar position="fixed">
-            <Toolbar sx={{ backgroundColor: "background.paper" }}>
-              <DashboardIcon
-                sx={{ color: "#444", transform: "translateY(-2px)" }}
-              />
+            <Toolbar>
+              <DashboardIcon />
               <Typography variant="h6" color="text.primary">
                 Next.js App Router
               </Typography>
             </Toolbar>
           </AppBar>
-          <Box
-            component="main"
-            sx={{
-              bgcolor: "background.default",
-              ml: `${DRAWER_WIDTH}px`,
-              mt: ["48px", "56px", "64px"],
-            }}
-          >
-            {children}
-          </Box>
+          <Box component="main">{children}</Box>
         </ThemeRegistry>
       </body>
     </html>
