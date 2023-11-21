@@ -39,7 +39,7 @@ services:
       - ./.docker/.ipython:/root/.ipython:cached
     environment:
       PYTHONPATH: .
-      DATABASE_URL: 'postgresql://postgres:password@postgres:5432/postgres'
+      DATABASE_URL: 'postgresql://{{cookiecutter.postgres_user}}:{{cookiecutter.postgres_password}}@postgres:5432/{{cookiecutter.postgres_database}}'
       CELERY_BROKER_URL: 'redis://redis:6379/0'
       CELERY_RESULT_BACKEND: 'redis://redis:6379/0'
     depends_on:
@@ -51,9 +51,9 @@ services:
     image: postgres:16
     restart: always
     environment:
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: password
-      POSTGRES_DB: test_db
+      POSTGRES_USER: {{cookiecutter.postgres_user}}
+      POSTGRES_PASSWORD: {{cookiecutter.postgres_password}}
+      POSTGRES_DB: {{cookiecutter.postgres_database}}
     ports:
       - '5432:5432'
     volumes:
